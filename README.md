@@ -7,5 +7,5 @@ Instruction:
 - Make any new directory
 - Save there script.sh file
 - Download into created directory linuxmint ISO-file (Cinnamon)
-- Run this file
+- Run script.sh file
  
