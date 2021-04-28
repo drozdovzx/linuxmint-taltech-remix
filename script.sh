@@ -83,7 +83,7 @@ sed -i 's/-private-window --password-store=basic %u/firefox -private-window --pa
 sed -i 's/firefox -new-window/firefox -private-window --password-store=basic %u/g' /etc/skel/.local/share/applications/firefox.desktop
 sed -i 's/firefox -private-window/firefox -private-window --password-store=basic %u/g' /etc/skel/.local/share/applications/firefox.desktop
 
-#Clear clipboard
+#Clear clipboard every 1 min
 cat > etc/skel/.local/clipboard.sh <<EOF
 #!/bin/bash
 xsel -bc
@@ -92,15 +92,19 @@ xsel -x
 EOF
 (crontab -l 2>/dev/null; echo "* * * * * etc/skel/.local/clipboard.sh") | crontab -
 
+#Screenlock after 2 min
+
+#History disable by default
+
 #Other
 sudo wget -O /usr/share/backgrounds/linuxmint/default_background.jpg https://portal-int.taltech.ee/sites/default/files/styles/manual_crop/public/news-image/TalTech_Zoom_taust_1920x1080px-09_0.jpg?itok=j0S5GA_7
 
 
 yes | apt-get purge thunderbird*
 yes | apt-get purge pidgin*
-yes | apt-get purge gimp*xra
-yes | apt-get purge mint-backgrounds-ulyssa*
-yes | apt-get purge mint-backgrounds-ulyana*
+yes | apt-get purge gimp*
+#yes | apt-get purge mint-backgrounds-ulyssa*
+#yes | apt-get purge mint-backgrounds-ulyana*
 yes | apt-get upgrade
 
 exit
