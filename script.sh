@@ -126,8 +126,8 @@ ENDSCRIPT
 chmod +x edit/tmp/*.sh
 chroot edit ./tmp/prepare.sh
 #If you want to test something in the chroot environment, then uncomment next srtings
-chroot edit
-exit
+#chroot edit
+#exit
 
 chroot edit ./tmp/custom.sh
 chroot edit ./tmp/cleanup.sh
