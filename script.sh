@@ -58,7 +58,7 @@ cat > edit/tmp/custom.sh << ENDSCRIPT
 
 apt upgrade
 
-#ID-cart software 
+#ID-card software 
 wget -O id.sh https://installer.id.ee/media/ubuntu/install-open-eid.sh
 sed ':a;N;$!ba; s/test_root//2' id.sh > id-new.sh
 yes | sh id-mod.sh
