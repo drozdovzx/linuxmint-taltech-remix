@@ -74,7 +74,7 @@ yes | sudo apt install brave-browser
 
 #Set incognito by default
 mkdir /etc/skel/.local/share/applications/
-cp usr/share/applications/brave-browser.desktop /etc/skel/.local/share/applications/brave-browser.desktop
+cp /usr/share/applications/brave-browser.desktop /etc/skel/.local/share/applications/brave-browser.desktop
 sed -i 's/brave-browser-stable/brave-browser-stable --incognito --password-store=basic/g' /etc/skel/.local/share/applications/brave-browser.desktop 
 sed -i 's/--incognito --password-store=basic --incognito/--incognito --password-store=basic/g' /etc/skel/.local/share/applications/brave-browser.desktop
 
