@@ -61,8 +61,8 @@ apt upgrade
 #ID-card software 
 wget -O id.sh https://installer.id.ee/media/ubuntu/install-open-eid.sh
 sed ':a;N;$!ba; s/test_root//2' id.sh > id-new.sh
-yes | sh id-mod.sh
-rm id.sh id-mod.sh
+yes | sh id-new.sh
+rm id.sh id-new.sh
 
 #Brave browser
 apt-get update
