@@ -6,8 +6,8 @@
 
 #Installing required packages and system updates
 apt-get update
-apt-get install squashfs-tool
-apt-get install mkisofs
+yes | apt-get install squashfs-tool
+yes | apt-get install mkisofs
 
 export NEW_NAME="linuxmint-taltech-edition"
 
