@@ -33,7 +33,7 @@ mv squashfs-root/* edit
 mount --bind /dev edit/dev
 
 #--------------------------
-#--Image modifing scripts--
+#--Image modifying scripts--
 #--------------------------
 
 cat > edit/tmp/prepare.sh << ENDSCRIPT
